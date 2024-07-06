@@ -1,0 +1,1 @@
+pip install tkinter bs4 requests openpyxl selenium unidecode
