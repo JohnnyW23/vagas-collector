@@ -1,3 +1,5 @@
+# Copyright (c) 2024 Davi Nascimento <https://www.linkedin.com/in/davinasc/>
+
 from tkinter import *
 from tkinter import ttk, messagebox, filedialog
 import json
@@ -15,6 +17,9 @@ from unidecode import unidecode
 from abc import ABC, abstractmethod
 import ctypes
 ctypes.windll.kernel32.FreeConsole()
+
+# ctypes serviu para fazer com que quando o executável fosse iniciado, não abrisse junto uma janela de console.
+# Por isso também foi necessário tornar o presente arquivo como extensão .pyw, e não .py
 
 
 class VagasCollector:
@@ -39,6 +44,10 @@ class VagasCollector:
     menubar.add_cascade(menu=menu_arquivo, label='Arquivo')
     menu_arquivo.add_command(label='Selecionar pasta...', command=self.selecionarDiretorio)
 
+    menu_sobre = Menu(menubar)
+    menubar.add_cascade(menu=menu_sobre, label='Sobre')
+    menu_sobre.add_command(label='Sobre o projeto', command=self.sobreProjeto)
+
     menu_ajuda = Menu(menubar, name='help')
     menubar.add_cascade(menu=menu_ajuda, label='Ajuda')
     menu_ajuda.add_command(label ='Instruções', command=self.abrirInstrucoes) 
@@ -53,6 +62,43 @@ class VagasCollector:
       }
       with open ('settings.json', 'w') as arquivo:
         json.dump(dados, arquivo)
+  
+
+  def sobreProjeto(self):
+    sobre = Toplevel(root)
+    sobre.title('Sobre o projeto')
+    sobre.resizable(FALSE, FALSE)
+    sobre.attributes("-topmost", 1)
+    sobre.grab_set()
+
+    mainFrame = ttk.Frame(sobre, padding=(20, 20, 20, 30))
+    mainFrame.grid(column=0, row=0)
+
+    texto = ttk.Label(mainFrame, text="""Criado por Davi Nascimento. Confira abaixo a licença deste projeto:
+
+                      
+MIT License
+
+Copyright (c) 2024 Davi Nascimento
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.""")
+    texto.grid(column=0, row=0)
   
 
   def abrirInstrucoes(self):
