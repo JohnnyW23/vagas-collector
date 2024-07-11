@@ -3,10 +3,10 @@ Na busca por um estágio para alavancar minha carreira, tive a ideia de desenvol
 Assim que as vagas são coletadas, você escolhe se quer salvar uma planilha Excel ao fim do processo em um diretório de sua escolha. Tudo em passos simples!
 
 ## 🛠️ Ferramentas e tecnologias
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)\
-![Tkinter](https://img.shields.io/badge/Tkinter-%23eeeeee?style=for-the-badge&logo=python&logoColor=%23222222)\
-![Selenium](https://img.shields.io/badge/Selenium-%23222?style=for-the-badge&logo=selenium&logoColor=%2343B02A)\
-![BeautifulSoup4](https://img.shields.io/badge/BeautifulSoup4-%23eee?style=for-the-badge&logo=python&logoColor=%23222222)\
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![Tkinter](https://img.shields.io/badge/Tkinter-%23eeeeee?style=for-the-badge&logo=python&logoColor=%23222222)
+![Selenium](https://img.shields.io/badge/Selenium-%23222?style=for-the-badge&logo=selenium&logoColor=%2343B02A)
+![BeautifulSoup4](https://img.shields.io/badge/BeautifulSoup4-%23eee?style=for-the-badge&logo=python&logoColor=%23222222)
 ![JSON](https://img.shields.io/badge/JSON-%23dddddd?style=for-the-badge&logo=json&logoColor=%23000000)
 
 ### 📚 Principais bibliotecas Phyton utilizadas
@@ -28,6 +28,7 @@ Além disso, você precisa manter os seguintes elementos dentro da mesma pasta:
 - locais.json
 - settings.json
 
+Em outras palavras, mantenha a pasta "Vagas Collector" intocada.\
 O executável está pronto para funcionar! Outros arquivos, como main.pyw e requirements.txt, servem justamente para fins de estudo e transparência sobre o código
 usado no programa. Não são necessários para o funcionamento do executável, mas sinta-se à vontade para explorar, estudar e sugerir melhorias!
 
